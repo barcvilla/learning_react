@@ -34,7 +34,22 @@ function variableConAmbito()
     console.log('global: ', topic);
 }
 
-variableConAmbito();
-variableSinAmbito();
-declareConstOldWay();
-declareConstModerWay();
+function templateString()
+{
+    var firstName = "Carlos";
+    var lastName = "Villanueva";
+    console.log("Concatenacion usando signo + " + firstName + " " + lastName);
+    // usamos un template string
+    console.log(`Usamos template string para concatenar ${firstName} ${lastName}`);
+}
+
+function main()
+{
+    templateString();
+    variableConAmbito();
+    variableSinAmbito();
+    declareConstOldWay();
+    declareConstModerWay();
+}
+
+main();
