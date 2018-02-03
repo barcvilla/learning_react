@@ -43,8 +43,27 @@ function templateString()
     console.log(`Usamos template string para concatenar ${firstName} ${lastName}`);
 }
 
+function defaultParameterDemo1(name = 'Shane McConkey', activity ='skiing')
+{
+    console.log(`${name} loves ${activity}`);
+}
+
+var defaultPerson={
+    name:{
+        first: "Shane",
+        last: "McConkey"
+    },
+    favActivity: "skiing"
+}
+function defaultParameterDemo2(p = defaultPerson)
+{
+    console.log(`${p.name.first} loves ${p.favActivity}`);
+}
+
 function main()
 {
+    defaultParameterDemo2();
+    defaultParameterDemo1();
     templateString();
     variableConAmbito();
     variableSinAmbito();
