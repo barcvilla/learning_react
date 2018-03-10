@@ -5,14 +5,19 @@
         <title>React Elements</title>
     </head>
     <body>
-        <!-- react container -->
-        <div class="react-container"></div>
+        <!-- Target container -->
+        <div id="react-container"></div>
 
         <!-- React library & ReactDOM -->
         <script src="https://unpkg.com/react@15.4.2/dist/react.js"></script>
         <script src="https://unpkg.com/react-dom@15.4.2/dist/react-dom.js"></script>
         <script>
-            // pure React and Javascript code
+            /* creamos un heading one element. El tercer argumento representa el elemento hijo. 
+               El segundo argumento representa la propiedad del elemento. H1 no tiene propiedades*/
+            const dish = React.createElement("h1", null, "Baked Salmon")
+            ReactDOM.render(dish, document.getElementById('react-container'))
+            // logging el elemento heading
+            console.log('dish', dish)
         </script>
     </body>
 </html> 
